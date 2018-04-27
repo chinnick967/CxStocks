@@ -45,6 +45,23 @@ module.exports = {
         include: /node_modules/,
         loaders: ['style-loader', 'css-loader'],
       }, {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: require.resolve('style-loader'),
+          },
+          {
+            loader: require.resolve('css-loader'),
+            options: {
+              importLoaders: 1,
+            }
+          },
+          {
+            loader: require.resolve('sass-loader'),
+          },
+        ]
+      }, {
         test: /\.jsx*$/,
         exclude: /node_modules/,
         loader: 'babel',
