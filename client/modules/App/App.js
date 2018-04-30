@@ -50,7 +50,7 @@ export class App extends Component {
             ]}
           />
           <div className="container">
-            <Login />
+            <Login news={this.props.children} />
             {this.props.children}
           </div>
           <Footer />
