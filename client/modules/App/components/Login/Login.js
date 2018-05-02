@@ -1,6 +1,6 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import PostListPage from './././Post/pages/PostListPage/PostListPage.js';
+import PostListPage from '../../../Post/pages/PostListPage/PostListPage';
 
 // Import Style
 import styles from './Login.scss';
