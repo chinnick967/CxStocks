@@ -10,11 +10,17 @@ export function Login(props) {
     <div className="login">
         <h1>Pixel</h1>
         <div className="news section">
-            <h3>News</h3>
+            <h3>Latest Patch Notes</h3>
             <PostListPage />
         </div>
         <div className="login-panel section">
-
+          <h3>Sign Up / Login</h3>
+            <form>
+              <input type="text" placeholder="Username" name="uname" required />
+              <input type="password" placeholder="Password" name="psw" required />
+              <input type="submit" id="create" value="Create" />
+              <input type="submit" id="login" value="Play" />
+            </form>
         </div>
     </div>
   );

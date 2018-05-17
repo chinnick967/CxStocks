@@ -35,7 +35,7 @@ export class App extends Component {
         {this.state.isMounted && !window.devToolsExtension && process.env.NODE_ENV === 'development' && <DevTools />}
         <div>
           <Helmet
-            title="MERN Starter - Blog App"
+            title="Pixel - Card Game"
             titleTemplate="%s - Blog App"
             meta={[
               { charset: 'utf-8' },
@@ -52,6 +52,14 @@ export class App extends Component {
           <div className="container">
             <Login news={this.props.children} />
             {this.props.children}
+          </div>
+          <div className="fullscreenContainer">
+            <div className="anchor-tabs">
+              <a href="#gameplay">Gameplay</a><a href="#news">Latest News</a><a href="#cards">Cards</a><a href="#features">Features</a><a href="#howto">How to Play</a>
+            </div>
+            <div id="gameplay">
+              <iframe src="https://www.youtube.com/embed/um-1fAVU1OQ?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
           </div>
           <Footer />
         </div>

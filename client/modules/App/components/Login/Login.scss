@@ -11,6 +11,34 @@
     box-sizing: border-box;
     .section {
         width: 50%;
+        vertical-align: top;
+        display: inline-block;
+        height: 100%;
+        &.news {
+          overflow-y: scroll;
+        }
+        &.login-panel {
+          //padding-top: 30px;
+          input {
+            display: block;
+            text-align: center;
+            width: 70%;
+            margin: 20px auto;
+            position: relative;
+            height: 35px;
+            font-size: 20px;
+            transform: skew(-0.15rad);
+            border-radius: 5px;
+            &[type="submit"] {
+              width: 100px;
+              height: 100px;
+              border-radius: 50px;
+              display: inline-block;
+              transform: none;
+              margin: 5px 15px;
+            }
+          }
+        }
     }
   }
   
