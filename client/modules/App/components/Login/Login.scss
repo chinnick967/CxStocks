@@ -3,12 +3,17 @@
     padding: 45px 0;
     background-size: cover;
     width: 90%;
-    height: 400px;
-    background:rgb(1, 133, 218);
+    height: 450px;
+    background: url("../../images/web-pages/Reusable/Textures/wood-texture-repeatable-3.png");
+    //background-size: cover;
     position: relative;
     margin: 0 auto;
     color: white;
     box-sizing: border-box;
+    position: relative;
+    .header {
+      
+    }
     .section {
         width: 50%;
         vertical-align: top;
@@ -22,13 +27,11 @@
           input {
             display: block;
             text-align: center;
-            width: 70%;
-            margin: 20px auto;
+            width: 65%;
+            margin: 0px auto;
             position: relative;
-            height: 35px;
-            font-size: 20px;
-            transform: skew(-0.15rad);
-            border-radius: 5px;
+            height: 18px;
+            font-size: 16px;
             &[type="submit"] {
               width: 100px;
               height: 100px;
@@ -36,6 +39,36 @@
               display: inline-block;
               transform: none;
               margin: 5px 15px;
+            }
+            &[type="text"], &[type="password"] {
+              background-size: cover;
+              background: #432717;
+            }
+          }
+        }
+        fieldset {
+          border: none;
+          width: 250px;
+          position: relative;
+          margin: 20px auto;
+          &:before {
+            content: url("../../images/web-pages/Reusable/textbox.png");
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+          input[type="text"], input[type="password"] {
+            margin-top: 12px;
+            color: white;
+            border: solid 1px black;
+            &:focus {
+              //outline: #53742b auto 5px;
+              outline: none;
+            }
+            &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+              color: white;
+              opacity: .9; /* Firefox */
             }
           }
         }

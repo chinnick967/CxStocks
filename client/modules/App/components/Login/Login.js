@@ -16,8 +16,8 @@ export function Login(props) {
         <div className="login-panel section">
           <h3>Sign Up / Login</h3>
             <form>
-              <input type="text" placeholder="Username" name="uname" required />
-              <input type="password" placeholder="Password" name="psw" required />
+              <fieldset class="text"><input type="text" placeholder="Username" name="uname" required /></fieldset>
+              <fieldset class="text"><input type="password" placeholder="Password" name="psw" required /></fieldset>
               <input type="submit" id="create" value="Create" />
               <input type="submit" id="login" value="Play" />
             </form>
