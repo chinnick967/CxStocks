@@ -29,6 +29,17 @@ input:-moz-placeholder {
 
 body {
 	background: #FFF;
-	font-family: 'Lato', sans-serif;
+	font-family: main-font;
 	font-size: 16px;
+	background: black;
+	background: url(modules/App/images/web-pages/Reusable/smudgy_bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
 }
+
+
+@font-face {
+	font-family: main-font;
+	src: url(modules/App/images/web-pages/Reusable/Fonts/Overlock-Regular.ttf);
+  }

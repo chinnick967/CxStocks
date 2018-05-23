@@ -53,7 +53,7 @@ module.exports = {
         test: /\.scss$/,
         loaders: ['style-loader', 'css-loader', 'sass-loader']
       }, {
-        test: /\.(jpe?g|gif|png|svg)$/i,
+        test: /\.(jpe?g|gif|png|svg|woff|woff2|eot|ttf)$/i,
         loader: 'url-loader?limit=10000',
       }, {
         test: /\.json$/,

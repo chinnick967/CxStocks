@@ -1,16 +1,40 @@
 .login{
     text-align: center;
     padding: 45px 0;
+    padding-top: 20px;
     background-size: cover;
     width: 90%;
-    height: 450px;
-    background: url("../../images/web-pages/Reusable/Textures/wood-texture-repeatable-3.png");
+    height: 525px;
+    background: url("../../images/web-pages/Reusable/Textures/paper-texture.png");
     //background-size: cover;
     position: relative;
     margin: 0 auto;
     color: white;
     box-sizing: border-box;
     position: relative;
+    margin-top: 65px;
+    max-width: 770px;
+    margin-bottom: 30px;
+    &:after {
+      content: url("../../images/web-pages/Reusable/support_heading_texture.png");
+      position: absolute;
+      top: -51px;
+      left: -30px;
+      right: 0px;
+      margin: 0 auto;
+      width: 100%;
+      z-index: 2;
+    }
+    &:before {
+      content: url("../../images/web-pages/Reusable/support_outer_frame.png");
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 0;
+    }
+    .header-logo {
+      width: 200px;
+    }
     .header {
       
     }
@@ -19,6 +43,7 @@
         vertical-align: top;
         display: inline-block;
         height: 100%;
+        z-index: 3;
         &.news {
           overflow-y: scroll;
         }
@@ -33,44 +58,68 @@
             height: 18px;
             font-size: 16px;
             &[type="submit"] {
-              width: 100px;
-              height: 100px;
-              border-radius: 50px;
+              width: 217px;
+              height: 36px;
               display: inline-block;
               transform: none;
               margin: 5px 15px;
+              background: transparent;
+              position: relative;
+              background-image: url("../../images/web-pages/Reusable/Buttons/wide_button_normal.png");
+              //color: #183202;
+              //font-weight: bold;
+              color: white;
+              text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+              border: none;
+              &:hover {
+                cursor: pointer;
+              }
             }
             &[type="text"], &[type="password"] {
               background-size: cover;
-              background: #432717;
+              background: transparent;
             }
           }
         }
+        h1, h3 {
+          color: #552f21;
+        }
         fieldset {
           border: none;
-          width: 250px;
+          width: 300px;
           position: relative;
-          margin: 20px auto;
+          margin: 10px auto;
+          height: 38px;
           &:before {
-            content: url("../../images/web-pages/Reusable/textbox.png");
+            //content: url("../../images/web-pages/Reusable/textbox.png");
+            content: url("../../images/web-pages/Reusable/wider_form_merged.png");
             width: 100%;
             position: absolute;
             left: 0;
             top: 0;
           }
           input[type="text"], input[type="password"] {
-            margin-top: 12px;
+            margin-top: 10px;
             color: white;
-            border: solid 1px black;
+            padding: 5px;
+            font-size: 16px;
+            width: 90%;
+            border: none;
             &:focus {
               //outline: #53742b auto 5px;
               outline: none;
             }
             &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
               color: white;
-              opacity: .9; /* Firefox */
+              opacity: .7; /* Firefox */
             }
           }
+        }
+        small {
+          display: block;
+          margin-top: 20px;
+          color: black;
+          font-weight: bold;
         }
     }
   }

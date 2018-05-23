@@ -10,6 +10,7 @@ import DevTools from './components/DevTools';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Login from './components/Login/Login';
+import HomeNavBar from './components/Home-Nav-Bar/Home-Nav-Bar';
 
 // Import Actions
 import { toggleAddPost } from './AppActions';
@@ -54,9 +55,7 @@ export class App extends Component {
             {this.props.children}
           </div>
           <div className="fullscreenContainer">
-            <div className="anchor-tabs">
-              <a href="#gameplay">Gameplay</a><a href="#news">Latest News</a><a href="#cards">Cards</a><a href="#features">Features</a><a href="#howto">How to Play</a>
-            </div>
+            <HomeNavBar />
             <div id="gameplay">
               <iframe src="https://www.youtube.com/embed/um-1fAVU1OQ?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
