@@ -36,6 +36,7 @@ import Helmet from 'react-helmet';
 // Import required modules
 import routes from '../client/routes';
 import { fetchComponentData } from './util/fetchData';
+import loginRoutes from './routes/login.routes';
 import posts from './routes/post.routes';
 import dummyData from './dummyData';
 import serverConfig from './config';
@@ -60,6 +61,7 @@ app.use(bodyParser.json({ limit: '20mb' }));
 app.use(bodyParser.urlencoded({ limit: '20mb', extended: false }));
 app.use(Express.static(path.resolve(__dirname, '../dist/client')));
 app.use('/api', posts);
+app.use('/login', loginRoutes);
 
 // Render Initial HTML
 const renderFullPage = (html, initialState) => {

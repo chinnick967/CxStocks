@@ -1,7 +1,44 @@
-import Post from '../models/post';
+import Login from '../models/login';
 import cuid from 'cuid';
 import slug from 'limax';
 import sanitizeHtml from 'sanitize-html';
+
+import bcrypt from 'bcrypt-nodejs';
+const saltRounds = 10;
+
+// Takes username & password
+export function signIn(req, res) {
+  Login.findOne({username: req.body.user.username}).exec((err, matchedUser) => {
+    bcrypt.compare(matchedUser.password, req.body.user.password, null, function(err, res) {
+      if (res) {
+        // sign in
+        req.session.username = req.body.user.username;
+      } else {
+        res.status(400).send(err);
+      }
+    });
+  });
+}
+
+export function createAccount(req, res) {
+  const newUser = new Login(req.body.user);
+
+  // sanitize
+  newUser.username = sanitizeHtml(newUser.username);
+
+  bcrypt.hash(newUser.password, saltRounds, null, function(err, hash) {
+    newUser.save((err, saved) => {
+      if (err) {
+        console.log("failed to save");
+        res.json({ user: "oh no"});
+        //res.status(500).send(err);
+      } else {
+        req.session.username = req.body.user.username;
+        res.json({ user: saved });
+      }
+    });
+  });
+}
 
 /**
  * Get all posts

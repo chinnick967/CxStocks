@@ -52,12 +52,11 @@ export class App extends Component {
           />
           <div className="container">
             <Login news={this.props.children} />
-            {this.props.children}
           </div>
           <div className="fullscreenContainer">
             <HomeNavBar />
             <div id="gameplay">
-              <iframe src="https://www.youtube.com/embed/um-1fAVU1OQ?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/um-1fAVU1OQ?autoplay=1"></iframe>
             </div>
           </div>
           <Footer />
@@ -68,7 +67,7 @@ export class App extends Component {
 }
 
 App.propTypes = {
-  children: PropTypes.object.isRequired,
+  //children: PropTypes.object.isRequired,
   dispatch: PropTypes.func.isRequired,
   intl: PropTypes.object.isRequired,
 };
