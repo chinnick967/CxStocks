@@ -10,7 +10,7 @@ import DevTools from './components/DevTools';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Login from './components/Login/Login';
-import HomeNavBar from './components/Home-Nav-Bar/Home-Nav-Bar';
+import Meta from './components/Meta/Meta';
 
 // Import Actions
 import { toggleAddPost } from './AppActions';
@@ -50,14 +50,9 @@ export class App extends Component {
               },
             ]}
           />
+          <Header />
           <div className="container">
-            <Login news={this.props.children} />
-          </div>
-          <div className="fullscreenContainer">
-            <HomeNavBar />
-            <div id="gameplay">
-              <iframe src="https://www.youtube.com/embed/um-1fAVU1OQ?autoplay=1"></iframe>
-            </div>
+            <Meta />
           </div>
           <Footer />
         </div>

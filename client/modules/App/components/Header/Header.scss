@@ -1,0 +1,21 @@
+.header {
+    width: 100%;
+    height: 65px;
+    padding: 0 30%;
+    //background: rgba(255, 255, 255, .1);
+    //border-bottom: solid .5px #9725ab;
+    //box-shadow: 0px 1px 5px 0px #9725ab;
+    #logo {
+        width: 50px;
+        margin-top: 15px;
+    }
+    #logo-title {
+        color: #9a26ae;
+        vertical-align: top;
+        margin-top: 26px;
+        margin-left: 5px;
+        display: inline-block;
+        font-size: 24px;
+        //font-weight: bold;
+    }
+}

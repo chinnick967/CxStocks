@@ -1,0 +1,48 @@
+.profile {
+    width: 250px;
+    height: 350px;
+    background: white;
+    display: inline-block;
+    margin: 20px;
+    background: url(../../images/profiles/bjorn.jpg);
+    //box-shadow: 0px 0px 5px 2px white;
+    //border: solid 3px black;
+    //border-radius: 2px;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+    .desc {
+        width: 100%;
+        height: 100px;
+        position: relative;
+        margin-top: 175px;
+        margin-bottom: 10px;
+        background: rgba(0, 0, 0, .8);
+        padding: 5px;
+        h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            text-decoration: underline;
+        }
+        span {
+            color: #9a26ae;
+            font-weight: bold;
+        }
+    }
+    button {
+        background: #9a26ae;
+        border: none;
+        display: inline-block;
+        width: 100%;
+        height: 30px;
+        border-radius: 2px;
+        text-transform: uppercase;
+        color: white;
+        font-weight: bold;
+        box-shadow: 0px 2px 0px 0px #390e40;
+        &:hover {
+            cursor: pointer;
+        }
+      }
+}
