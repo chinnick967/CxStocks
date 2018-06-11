@@ -1,16 +1,25 @@
 .meta {
     color: white;
     width: 100%;
-    text-align: center;
+    //text-align: center;
     h1 {
         margin-bottom: 60px;
         font-size: 40px;
         text-transform: uppercase;
     }
     h2 {
-        font-size: 40px;
+        font-size: 30px;
+        text-align: left;
+        width: auto;
+        background: #9a26ae;
+        //background: #224C00;
+        display: inline-block;
+        padding: 5px 10px;
     }
     section {
         margin-bottom: 60px;
+        .profiles {
+            text-align: center;
+        }
     }
 }
